@@ -1,22 +1,154 @@
+
 body {
-    font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+background-color: #9c9f84;
+margin: 0px;
+font-family: Verdana, Georgia, serif;
+font-size: 14px;
 }
 
-.center {
-    text-align: center;
+table
+{
+	width: 80%;
 }
 
-.text-big {
-    font-size: 300%;
+table, th, td {
+	border: 1px solid blue;
+	border-collapse: collapse;
 }
 
-.bold {
-    font-weight: bold;
+th, td{
+	padding: 5px;
+	text-align: center;
 }
 
-.img-medium {
-    height: 200px;
+th{
+	background-color: darkblue;
+	color: white;
+}
+
+tr:nth-child(odd)
+{
+	background-color: white;
+}
+
+tr:nth-child(even)
+{
+	background-color: #e8e8e8;
+}
+
+#header {
+background-color: #5c755e;
+margin: 10px;
+height: 140px;
+font-size: 90%;
+border-radius: 5px;
+}
+
+#headerphoto{
+	background-color: #5c755e;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 5px;
+	height: 115px;
+	font-size: 90%;
+	float: left;
+	padding-left: 10px;
+	padding-top: 5px;
+	border-radius: 5px;
+}
+
+#headertext{
+	background-color: #5c755e;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	height: 120px;
+	font-size: 90%;
+	padding-left: 10%;
+	padding-top: 5px;
+	color: white;
+	font-variant: small-caps;
+	font-size: 120%;
+	border-radius: 5px;
+}
+
+
+#footer {
+background-color: #5c755e;
+margin: 10px;
+height: 50px;
+border-radius: 5px;
+clear:right;
+vertical-align: center;
+padding-top: 3px;
+padding-bottom: 10px;
+color: white;
+font-variant: small-caps;
+font-size: 120%;
+}
+
+.main {
+background-color: #e5e4d7;
+margin-left: 10px;
+margin-right: 320px;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 5px;
+padding: 20px;
+font-size: 110%;
+}
+
+h2{
+font-size: 120%;
+color: lightgreen;
+margin-bottom:0;
+margin-top:0;
+}
+
+h3 {
+font-size: 120%;
+color: #ce282e;	
+margin-top:0;
+}
+
+h4{
+font-size: 120%;
+color: darkgreen;
+margin-bottom:0;
+margin-top:0;
+}
+
+.sideright {
+background-color: #e5e4d7;
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 0px;
+margin-bottom: 10px;
+border-radius: 5px;
+padding: 20px;
+font-size: 105%;
+float: right;
+width: 260px;
+clear:right;
+}
+
+.imagesidebar {
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 0px;
+margin-bottom: 10px;
+border-radius: 5px;
+font-size: 105%;
+float: right;
+width: 300px;
+clear:right;
+opacity: 1.0;
+transition: opacity 0.5s ease-in-out;
+}
+
+.imagesidebar:hover{
+	opacity: 0.4;
+	
 }
 
