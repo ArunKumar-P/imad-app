@@ -1,3 +1,4 @@
+/* =============== LAYOUT SECTION =============== */
 
 body {
 background-color: #9c9f84;
@@ -6,50 +7,21 @@ font-family: Verdana, Georgia, serif;
 font-size: 14px;
 }
 
-table
-{
-	width: 80%;
-}
-
-table, th, td {
-	border: 1px solid blue;
-	border-collapse: collapse;
-}
-
-th, td{
-	padding: 5px;
-	text-align: center;
-}
-
-th{
-	background-color: darkblue;
-	color: white;
-}
-
-tr:nth-child(odd)
-{
-	background-color: white;
-}
-
-tr:nth-child(even)
-{
-	background-color: #e8e8e8;
-}
-
 #header {
 background-color: #5c755e;
 margin: 10px;
-height: 140px;
-font-size: 90%;
+height: 40px;
+font-size: 100%;
 border-radius: 5px;
+padding-top: 10px;
 }
 
 #headerphoto{
 	background-color: #5c755e;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-left: 10px;
 	margin-right: 5px;
-	height: 115px;
+	height: 110px;
 	font-size: 90%;
 	float: left;
 	padding-left: 10px;
@@ -59,20 +31,45 @@ border-radius: 5px;
 
 #headertext{
 	background-color: #5c755e;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-left: 10px;
-	margin-right: 5px;
+	margin-right: 10px;
 	margin-bottom: 10px;
 	height: 120px;
 	font-size: 90%;
 	padding-left: 10%;
-	padding-top: 5px;
+	padding-top: 15px;
 	color: white;
 	font-variant: small-caps;
 	font-size: 120%;
 	border-radius: 5px;
 }
 
+#navbar ul{
+padding: 5px;
+list-style-type: none;
+text-align: center;
+background-color: darkblue;
+margin: 10px;
+border-radius: 5px;
+}
+
+#navbar ul li{
+display: inline;
+}
+
+#navbar ul li a{
+text-decoration: none;
+font-family: Arial;
+padding: .2em 1em;
+color: #fff;
+background-color: darkblue;
+}
+
+#navbar ul li a:hover{
+color: darkblue;
+background-color: #fff;
+}
 
 #footer {
 background-color: #5c755e;
@@ -99,24 +96,15 @@ padding: 20px;
 font-size: 110%;
 }
 
-h2{
-font-size: 120%;
-color: lightgreen;
-margin-bottom:0;
-margin-top:0;
-}
-
-h3 {
-font-size: 120%;
-color: #ce282e;	
-margin-top:0;
-}
-
-h4{
-font-size: 120%;
-color: darkgreen;
-margin-bottom:0;
-margin-top:0;
+.main2 {
+background-color: #e5e4d7;
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+border-radius: 5px;
+padding: 20px;
+font-size: 110%;
 }
 
 .sideright {
@@ -152,3 +140,60 @@ transition: opacity 0.5s ease-in-out;
 	
 }
 
+/* =============== HEADINGS SECTION =============== */
+h1{
+font-size: 140%;
+color: lime;
+margin-bottom:0;
+margin-top:0;
+}
+
+h2{
+font-size: 120%;
+color: lightgreen;
+margin-bottom:0;
+margin-top:0;
+}
+
+h3 {
+font-size: 120%;
+color: #ce282e;	
+margin-top:0;
+}
+
+h4{
+font-size: 120%;
+color: darkgreen;
+margin-bottom:0;
+margin-top:0;
+}
+/* =============== TABLES SECTION =============== */
+table
+{
+	width: 80%;
+}
+
+table, th, td {
+	border: 1px solid blue;
+	border-collapse: collapse;
+}
+
+th, td{
+	padding: 5px;
+	text-align: center;
+}
+
+th{
+	background-color: darkblue;
+	color: white;
+}
+
+tr:nth-child(odd)
+{
+	background-color: white;
+}
+
+tr:nth-child(even)
+{
+	background-color: #e8e8e8;
+}
