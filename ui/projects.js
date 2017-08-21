@@ -25,7 +25,7 @@ submit.onclick = function() {
 		}
 	};
 	
-	request.open('GET', 'http://http://pindikuruarun.imad.hasura-app.io/submit-comment?NewComment=' + newComment, true);
+	request.open('GET', 'http://pindikuruarun.imad.hasura-app.io/submit-comment?NewComment=' + newComment, true);
 	request.send(null);
 }
 
