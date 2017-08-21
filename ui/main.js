@@ -3,7 +3,7 @@ console.log('Loaded!');
 var quotes = [
 	"Travel is fatal to prejudice, bigotry, and narrow-mindedness.",
 	"The secret of getting ahead is getting started.",
-	"The report of my death was an exaggeration.",
+	"You are what you think! | You are what you eat!",
 	"Kindness is the language which the deaf can hear and the blind can see.",
 	"Whenever you find yourself on the side of the majority, it is time to pause and reflect.",
 	"Truth is stranger than fiction, but it is because Fiction is obliged to stick to possibilities; Truth is not.",
@@ -30,7 +30,8 @@ function changeFooterText() {
 	element.innerHTML = strResult;	
 }
 
+var madi = document.getElementById('madi');
 madi.onclick = function(){
-	alert('OnClickFunction called');
-	var interval = setInterval(changeFooterText, 5000);
+	var interval = setInterval(changeFooterText, 1000);
 }
+

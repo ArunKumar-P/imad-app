@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var Projects = {
 	'project-one': {
-		title: 'Project 1',
+		title1: 'Project 1',
 		header: 'Cloud Migration & Platform Migration: Cloud-Based EHR',
 		menu: `<ul>
 				<li><a href="/">Home</a></li>
@@ -43,7 +43,7 @@ var Projects = {
 	},
 	
 	'project-two': {
-		title: 'Project 2',
+		title1: 'Project 2',
 		header: 'Need for Activity Based Costing in Healthcare Setting',
 		menu: `<ul>
 				<li><a href="/">Home</a></li>
@@ -79,7 +79,7 @@ var Projects = {
 	},
 	
 	'project-three': {
-		title: 'Project 3',
+		title1: 'Project 3',
 		header: 'Inventory Management System',
 		menu: `<ul>
 				<li><a href="/">Home</a></li>
@@ -157,13 +157,14 @@ var Projects = {
 				<td></td>
 			</tr>
 		</table>
+	</div>
 		`,
 		footer: 'You are what you think! | You are what you eat!'
 	}		
 };
 
 function createTemplate (data){
-	var title = data.title;
+	var title1 = data.title1;
 	var header = data.header;
 	var menu = data.menu;
 	var content = data.content;
@@ -173,7 +174,7 @@ function createTemplate (data){
 	<html lang="en">
 	<head>
 	</head>
-		<title>${title}</title>
+		<title>${title1}</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type="text/css" rel="stylesheet" href="ui/style.css">
@@ -193,6 +194,16 @@ function createTemplate (data){
 		<div id="footer">
 			<p align="center">${footer}</p>
 		</div>	
+		<div id="comments">
+			Comments<br>
+			<textarea id="new_comment"></textarea><br><br>
+			<input type="submit" value="Submit" id="submit_btn"></input>
+			<hr></hr>
+			<p id="commentslist">
+			</p>
+			<hr></hr>
+		</div>
+		<script type="text/javascript" src="ui/projects.js"></script>
 	</body>
 	</html>
 	`;
@@ -202,6 +213,15 @@ function createTemplate (data){
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+var comments = [];
+app.get('/submit-comment', function (req, res) {
+	//Get the name from the request
+	var comment = req.query.NewComment;
+	
+	comments.push(comment);
+	res.send(JSON.stringify(comments));
 });
 
 app.get('/:ProjectName', function (req, res) {
@@ -223,9 +243,15 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
+//Added in Module P4
+app.get('/ui/projects.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'projects.js'));
+});
+
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+
 
 
 // Do not change port, otherwise your app won't run on IMAD servers

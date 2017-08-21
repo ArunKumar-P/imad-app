@@ -85,6 +85,20 @@ font-variant: small-caps;
 font-size: 120%;
 }
 
+#comments {
+background-color: #fff;
+margin: 10px;
+border-radius: 5px;
+clear:right;
+padding: 10px;
+color: blue;
+font-size: 120%;
+}
+
+#comments p {
+	color: blue;
+	font-size: 80%;
+}
 .main {
 background-color: #e5e4d7;
 margin-left: 10px;
@@ -196,4 +210,17 @@ tr:nth-child(odd)
 tr:nth-child(even)
 {
 	background-color: #e8e8e8;
+}
+
+/* ========== FORM ELEMENTS ========== */
+textarea{
+	width: 80%;
+	height: 100px;
+	padding: 12px 20px; 
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	background-color: #f8f8f8;
+	resize: none;
+	font-size: 16px;
 }
