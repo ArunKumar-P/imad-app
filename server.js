@@ -194,7 +194,7 @@ function createTemplate (data){
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type="text/css" rel="stylesheet" href="/ui/style.css">
-		<link rel="shortcut icon" href="ui/favicon.ico" type="image/x-icon"> 
+		<link rel="shortcut icon" href="/ui/favicon.ico" type="image/x-icon"> 
 	</head>
 
 	<body>
