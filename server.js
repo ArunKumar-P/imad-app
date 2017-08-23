@@ -220,7 +220,7 @@ function createTemplate (data){
 			</p>
 			<hr></hr>
 		</div>
-		<script type="text/javascript" src="ui/projects.js"></script>
+		<script type="text/javascript" src="/ui/projects.js"></script>
 	</body>
 	</html>
 	`;
