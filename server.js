@@ -15,6 +15,15 @@ var config=
 var app = express();
 app.use(morgan('combined'));
 
+var menu = `<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/projects/project-one">Project 1</a></li>
+				<li><a href="/projects/project-two">Project 2</a></li>
+				<li><a href="/projects/project-three">Project 3</a></li>
+			</ul>`;
+
+var footer = 'You are what you think! | You are what you eat!';
+
 var Projects = {
 	'project-one': {
 		title1: 'Project 1',
@@ -247,9 +256,9 @@ app.get('/test-db', function (req, res) {
     });
 });
 
-app.get('/:ProjectName', function (req, res) {
+app.get('/projects/:ProjectName', function (req, res) {
 	
-	var ProjectName = req.params.ProjectName;	
+	pool.query("SELECT * from article where title='"+req.params.ProjectName+"'")
 	res.send(createTemplate(Projects[ProjectName]));	
 });
 
