@@ -186,6 +186,7 @@ function createTemplate (data){
 	var title = data.title;
 	var header = data.heading;
 	var content = data.content;
+	var dt = data.date;
 	
 	var htmlTemplate = `
 	<html lang="en">
@@ -206,6 +207,7 @@ function createTemplate (data){
 		</div>
 		
 		<div class="main2">
+		    ${dt}
 			${content}
 		</div>
 		<div id="footer">
