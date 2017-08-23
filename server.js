@@ -207,7 +207,7 @@ function createTemplate (data){
 		</div>
 		
 		<div class="main2">
-		    Updated On:${dt.toDateString()}<br>
+		    Updated On: ${dt.toDateString()}<br>
 			${content}
 		</div>
 		<div id="footer">
