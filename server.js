@@ -183,7 +183,7 @@ var Projects = {
 };
 
 function createTemplate (data){
-	var title1 = data.title1;
+	var title1 = data.title;
 	var header = data.header;
 	var content = data.content;
 	
