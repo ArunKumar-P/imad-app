@@ -183,14 +183,14 @@ var Projects = {
 };
 
 function createTemplate (data){
-	var title1 = data.title;
+	var title = data.title;
 	var header = data.header;
 	var content = data.content;
 	
 	var htmlTemplate = `
 	<html lang="en">
 	<head>
-		<title>${title1}</title>
+		<title>${title}</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type="text/css" rel="stylesheet" href="ui/style.css">
