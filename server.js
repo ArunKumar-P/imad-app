@@ -207,7 +207,7 @@ function createTemplate (data){
 		</div>
 		
 		<div class="main2">
-		    ${dt}
+		    ${dt}<br>
 			${content}
 		</div>
 		<div id="footer">
