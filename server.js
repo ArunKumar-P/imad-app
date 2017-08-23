@@ -185,9 +185,7 @@ var Projects = {
 function createTemplate (data){
 	var title1 = data.title1;
 	var header = data.header;
-	var menu = data.menu;
 	var content = data.content;
-	var footer = data.footer;
 	
 	var htmlTemplate = `
 	<html lang="en">
@@ -258,7 +256,19 @@ app.get('/test-db', function (req, res) {
 
 app.get('/projects/:ProjectName', function (req, res) {
 	
-	pool.query("SELECT * from article where title='"+req.params.ProjectName+"'")
+	pool.query("SELECT * from article where title='"+req.params.ProjectName+"'", function(err, result) {
+	    if (err){
+	        result.status(500).send(err.toString());
+	    } else{
+	        if(result.rows.length===0){
+	            res.status(404).send('Article not found');
+	        } else {
+	            var ProjectData = result.rows[0];
+	            res.send(createTemplate(ProjectData));
+	        }
+	    }
+	    
+	})
 	res.send(createTemplate(Projects[ProjectName]));	
 });
 
