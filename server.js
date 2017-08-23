@@ -255,21 +255,18 @@ app.get('/test-db', function (req, res) {
 });
 
 app.get('/projects/:ProjectName', function (req, res) {
-	
 	pool.query("SELECT * from article where title='"+req.params.ProjectName+"'", function(err, result) {
 	    if (err){
 	        result.status(500).send(err.toString());
-	    } else{
-	        if(result.rows.length===0){
+	    } else {
+	        if (result.rows.length === 0){
 	            res.status(404).send('Article not found');
 	        } else {
 	            var ProjectData = result.rows[0];
 	            res.send(createTemplate(ProjectData));
 	        }
 	    }
-	    
 	})
-	res.send(createTemplate(Projects[ProjectName]));	
 });
 
 app.get('/ui/style.css', function (req, res) {
